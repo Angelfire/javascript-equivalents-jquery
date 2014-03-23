@@ -12,8 +12,10 @@ jQuery is a great cross-platform JavaScript library for DOM selection, manipulat
     document.getElementById('foo')
 ###$('.foo')
 IE 8+
+
     document.querySelectorAll('.foo')
 IE 9+
+
     document.getElementsByClassName('foo')
 ###$('span')    
     document.getElementsByTagName('span')
@@ -31,6 +33,7 @@ IE 9+
     document.getElementById('foo').children
 ###$('#foo').next()
 IE 9+
+
     document.getElementById('foo').nextElementSibling
 
 
