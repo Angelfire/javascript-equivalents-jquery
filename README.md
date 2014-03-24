@@ -12,7 +12,8 @@ jQuery is a great cross-platform JavaScript library for DOM selection, manipulat
 
 ##Selectors
 
-###$() (IE 8+)
+###$() 
+(IE 8+)
 ```javascript
 var $ = function(el) {
     return document.querySelectorAll(el);
@@ -134,7 +135,7 @@ document.getElementById('foo').addEventListener('click', function() { ... })
 
 ##Others
 
-###$('#foo').append('<div id="a">b</div>')
+###$('#foo').after('&lt;div id="a"&gt;b&lt;/div&gt;')
 ```javascript
 document.getElementById('foo').insertAdjacentHTML('beforeend', '<div id="a">b</div>')
     
