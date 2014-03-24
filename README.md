@@ -63,6 +63,14 @@ IE 10 +
 
     document.getElementById('foo').classList.toggle('bar')
 
+##Styles
+
+###$('#foo').hide()
+    document.getElementById('foo').style.display = 'none'
+###$('#foo').css('background-color', red')
+    document.getElementById('foo').style['background-color'] = 'red'
+    
+    document.getElementById('foo').style.backgroundColor = 'red'
 
 
 ##Authors
