@@ -24,93 +24,138 @@ document.getElementById('foo')
 ```
 ###$('.foo')
 IE 8+
-
-    document.querySelectorAll('.foo')
+```javascript
+document.querySelectorAll('.foo')
+```
 IE 9+
-
-    document.getElementsByClassName('foo')
-###$('span')    
-    document.getElementsByTagName('span')
+```javascript
+document.getElementsByClassName('foo')
+```
+###$('span')
+```javascript
+document.getElementsByTagName('span')
+```
 ###$('#foo span')
-    document.getElementById('foo').getElementsByTagName('span')
+```javascript
+document.getElementById('foo').getElementsByTagName('span')
+```
 ###$('html')
-    document.documentElement
+```javascript
+document.documentElement
+```
 ###$('head')
-    document.head
+```javascript
+document.head
+```
 ###$('body')
-    document.body
+```javascript
+document.body
+```
 ###$('#foo').parent()
-    document.getElementById('foo').parentNode
+```javascript
+document.getElementById('foo').parentNode
+```
 ###$('#foo).children()
-    document.getElementById('foo').children
+```javascript
+document.getElementById('foo').children
+```
 ###$('#foo').next()
 IE 9+
-
-    document.getElementById('foo').nextElementSibling
+```javascript
+document.getElementById('foo').nextElementSibling
+```
 
 ##Attributes
 
 ###$('#foo').html()
-    document.getElementById('foo').innerHTML
+```javascript
+document.getElementById('foo').innerHTML
+```
 ###$('#foo').html('Hello world!')
-    document.getElementById('foo').innerHTML = 'Hello world!'
+```javascript
+document.getElementById('foo').innerHTML = 'Hello world!'
+```
 ###$('#foo').val()
-    document.getElementById('foo').value
+```javascript
+document.getElementById('foo').value
+```
 ###$('#foo').addClass('bar')
-    document.getElementById('foo').className += ' bar'
+```javascript
+document.getElementById('foo').className += ' bar'
+```
 IE 10+
-
-    document.getElementById('foo').classList.add('bar')
+```javascript
+document.getElementById('foo').classList.add('bar')
+```
 ###$('#foo').removeClass('bar')
 IE 10+
-
-     document.getElementById('foo').classList.remove('bar')
+```javascript
+document.getElementById('foo').classList.remove('bar')
+```
 ###$('#foo').hasClass('bar')
 IE 10+
-
-    document.getElementById('foo').classList.contains('bar')
+```javascript
+document.getElementById('foo').classList.contains('bar')
+```
 ###$('#foo').toggleClass('bar')
 IE 10 +
-
-    document.getElementById('foo').classList.toggle('bar')
+```javascript
+document.getElementById('foo').classList.toggle('bar')
+```
 
 ##Styles
 
 ###$('#foo').hide()
-    document.getElementById('foo').style.display = 'none'
+```javascript
+document.getElementById('foo').style.display = 'none'
+```
 ###$('#foo').css('background-color', red')
-    document.getElementById('foo').style['background-color'] = 'red'
+```javascript
+document.getElementById('foo').style['background-color'] = 'red'
     
-    document.getElementById('foo').style.backgroundColor = 'red'
+document.getElementById('foo').style.backgroundColor = 'red'
+```
 
 ##Events
 
 ###$(document).ready
 IE 9+
-
-    document.addEventListener('DOMContentLoaded', function() { ... })
+```javascript
+document.addEventListener('DOMContentLoaded', function() { ... })
+```
 ###$('#foo').on('click', function() { ... })
-    document.getElementById('foo').onclick = function() { ... }
-
+```javascript
+document.getElementById('foo').onclick = function() { ... }
+```
 IE 9 +
-
-    document.getElementById('foo').addEventListener('click', function() { ... })
+```javascript
+document.getElementById('foo').addEventListener('click', function() { ... })
+```
 
 ##Others
 
-###$('#foo').append('<div id=&#34;a">b</div>')
-    document.getElementById('foo').insertAdjacentHTML('beforeend', '<div id="a">b</div>')
+###$('#foo').append('<div id="a">b</div>')
+```javascript
+document.getElementById('foo').insertAdjacentHTML('beforeend', '<div id="a">b</div>')
     
-    document.getElementById('foo').innerHTML += '<div id="a">b</div>'
-    
-###$('#foo').prepend('<div id=&#34;a">b</div>')
-    document.getElementById('foo').insertAdjacentHTML('afterbegin', '<div id="a">b</div>')
-###$('#foo').before('<div id=&#34;a">b</div>')
-    document.getElementById('foo').insertAdjacentHTML('beforebegin', '<div id="a">b</div>')
-###$('#foo').after('<div id=&#34;a">b</div>')
-    document.getElementById('foo').insertAdjacentHTML('afterend', '<div id="a">b</div>')
+document.getElementById('foo').innerHTML += '<div id="a">b</div>'
+```
+###$('#foo').prepend('<div id="a">b</div>')
+```javascript
+document.getElementById('foo').insertAdjacentHTML('afterbegin', '<div id="a">b</div>')
+```
+###$('#foo').before('<div id="a">b</div>')
+```javascript
+document.getElementById('foo').insertAdjacentHTML('beforebegin', '<div id="a">b</div>')
+```
+###$('#foo').after('<div id="a">b</div>')
+```javascript
+document.getElementById('foo').insertAdjacentHTML('afterend', '<div id="a">b</div>')
+```
 ###$('#foo').remove()
-    document.getElementById('foo').parentNode.removeChild(document.getElementById('foo'))
+```javascript
+document.getElementById('foo').parentNode.removeChild(document.getElementById('foo'))
+```
 
 ##Authors
 I take
