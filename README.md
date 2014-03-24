@@ -141,15 +141,15 @@ document.getElementById('foo').insertAdjacentHTML('beforeend', '<div id="a">b</d
     
 document.getElementById('foo').innerHTML += '<div id="a">b</div>'
 ```
-###$('#foo').prepend('<div id="a">b</div>')
+###$('#foo').prepend('&lt;div id="a"&gt;b&lt;/div&gt;')
 ```javascript
 document.getElementById('foo').insertAdjacentHTML('afterbegin', '<div id="a">b</div>')
 ```
-###$('#foo').before('<div id="a">b</div>')
+###$('#foo').before('&lt;div id="a"&gt;b&lt;/div&gt;')
 ```javascript
 document.getElementById('foo').insertAdjacentHTML('beforebegin', '<div id="a">b</div>')
 ```
-###$('#foo').after('<div id="a">b</div>')
+###$('#foo').after('&lt;div id="a"&gt;b&lt;/div&gt;')
 ```javascript
 document.getElementById('foo').insertAdjacentHTML('afterend', '<div id="a">b</div>')
 ```
