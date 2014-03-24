@@ -14,12 +14,14 @@ jQuery is a great cross-platform JavaScript library for DOM selection, manipulat
 
 ###$() (IE 8+)
 ```javascript
-    var $ = function(el) {
-       return document.querySelectorAll(el);
-    };
+var $ = function(el) {
+    return document.querySelectorAll(el);
+};
 ```
 ###$('#foo')
-    document.getElementById('foo')
+```javascript
+document.getElementById('foo')
+```
 ###$('.foo')
 IE 8+
 
