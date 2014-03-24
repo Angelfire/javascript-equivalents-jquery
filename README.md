@@ -95,9 +95,10 @@ IE 9 +
 ##Others
 
 ###$('#foo').append('<div id="a">b</div>')
-    document.getElementById('foo').insertAdjacentHTML('beforeend', '<div id="a">b</div>')
+    document.getElementById('foo').insertAdjacentHTML('beforeend', '<div id=\"a\">b</div>')
     
     document.getElementById('foo').innerHTML += '<div id="a">b</div>'
+    
 ###$('#foo').prepend('<div id="a">b</div>')
     document.getElementById('foo').insertAdjacentHTML('afterbegin', '<div id="a">b</div>')
 ###$('#foo').before('<div id="a">b</div>')
