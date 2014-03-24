@@ -94,16 +94,16 @@ IE 9 +
 
 ##Others
 
-###$('#foo').append('<div id=\"\a\"\>b</div>')
+###$('#foo').append('<div id=&#34;a">b</div>')
     document.getElementById('foo').insertAdjacentHTML('beforeend', '<div id="a">b</div>')
     
     document.getElementById('foo').innerHTML += '<div id="a">b</div>'
     
-###$('#foo').prepend('<div id="a">b</div>')
+###$('#foo').prepend('<div id=&#34;a">b</div>')
     document.getElementById('foo').insertAdjacentHTML('afterbegin', '<div id="a">b</div>')
-###$('#foo').before('<div id="a">b</div>')
+###$('#foo').before('<div id=&#34;a">b</div>')
     document.getElementById('foo').insertAdjacentHTML('beforebegin', '<div id="a">b</div>')
-###$('#foo').after('<div id="a">b</div>')
+###$('#foo').after('<div id=&#34;a">b</div>')
     document.getElementById('foo').insertAdjacentHTML('afterend', '<div id="a">b</div>')
 ###$('#foo').remove()
     document.getElementById('foo').parentNode.removeChild(document.getElementById('foo'))
