@@ -158,7 +158,7 @@ document.getElementById('foo').style['background-color'] = 'red'
 document.getElementById('foo').style.backgroundColor = 'red'
 ```
 
-##Selectors
+##Effects
 
 ###$('#foo').fadeOut(750)
 ```javascript
