@@ -113,11 +113,38 @@ IE 10+
 ```javascript
 document.getElementById('foo').classList.contains('bar')
 ```
+
+```javascript
+function hasClass(elem, className) {
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+
+hasClass(document.getElementById('foo'), 'bar')
+```
+
+
 ###$('#foo').toggleClass('bar')
 IE 10 +
 ```javascript
 document.getElementById('foo').classList.toggle('bar')
 ```
+
+```javascript
+function toggleClass(elem, className) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace( ' ' + className + ' ' , ' ' );
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+}
+
+toggleClass(document.getElementById('foo'), 'bar')
+```
+
 
 ##Styles
 
