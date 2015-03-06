@@ -250,4 +250,9 @@ document.getElementById('foo').parentNode.removeChild(document.getElementById('f
 ```
 
 ##Authors
+Taking from:
+- [JavaScript equivalent to jQuery basics](http://codepen.io/danielcure/full/omDwv/)
 
+Inspired by:
+- [Doing without jQuery](http://evanhahn.com/doing-without-jquery/)
+- [From jQuery to JavaScript: A Reference](http://code.tutsplus.com/tutorials/from-jquery-to-javascript-a-reference--net-23703)
