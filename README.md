@@ -7,6 +7,7 @@ jQuery is a great cross-platform JavaScript library for DOM selection, manipulat
 * [Selectors](#selectors)
 * [Attributes](#attributes)
 * [Styles](#styles)
+* [Effects] (#effects)
 * [Events](#events)
 * [Others](#others)
 
@@ -122,7 +123,6 @@ function hasClass(elem, className) {
 hasClass(document.getElementById('foo'), 'bar')
 ```
 
-
 ###$('#foo').toggleClass('bar')
 IE 10 +
 ```javascript
@@ -145,7 +145,6 @@ function toggleClass(elem, className) {
 toggleClass(document.getElementById('foo'), 'bar')
 ```
 
-
 ##Styles
 
 ###$('#foo').hide()
@@ -157,6 +156,56 @@ document.getElementById('foo').style.display = 'none'
 document.getElementById('foo').style['background-color'] = 'red'
     
 document.getElementById('foo').style.backgroundColor = 'red'
+```
+
+##Selectors
+
+###$('#foo').fadeOut(750)
+```javascript
+function fadeOut(ms, el) {
+    var opacity = 1,
+        interval = 50,
+        gap = interval / ms;
+
+    function func() { 
+        opacity -= gap;
+        el.style.opacity = opacity;
+
+        if(opacity <= 0) {
+            window.clearInterval(fading); 
+            el.style.display = 'none';
+        }
+    }
+
+    var fading = window.setInterval(func, interval);
+
+}
+
+fadeOut(750, document.getElementById('foo'))
+```
+
+###$('#foo').fadeIn(750)
+```javascript
+function fadeIn(ms, el) {
+    var opacity = 0,
+        interval = 50,
+        gap = interval / ms;
+
+    el.style.display = 'block';
+    el.style.opacity = opacity;
+    
+    function func() { 
+        opacity += gap;
+        el.style.opacity = opacity;
+        if(opacity >= 1) {
+            window.clearInterval(fading);
+        }
+    }
+    
+    var fading = window.setInterval(func, interval);
+}
+
+fadeIn(750, document.getElementById('foo'))
 ```
 
 ##Events
