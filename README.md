@@ -7,7 +7,7 @@ jQuery is a great cross-platform JavaScript library for DOM selection, manipulat
 * [Selectors](#selectors)
 * [Attributes](#attributes)
 * [Styles](#styles)
-* [Effects] (#effects)
+* [Effects](#effects)
 * [Events](#events)
 * [Others](#others)
 
