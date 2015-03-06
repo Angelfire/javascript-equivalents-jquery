@@ -93,6 +93,21 @@ IE 10+
 ```javascript
 document.getElementById('foo').classList.remove('bar')
 ```
+
+```javascript
+function removeClass(elem, className) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+
+removeClass(document.getElementById('foo'), 'bar')
+```
+
 ###$('#foo').hasClass('bar')
 IE 10+
 ```javascript
