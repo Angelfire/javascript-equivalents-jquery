@@ -1,9 +1,9 @@
-#JavaScript equivalent to jQuery basics
+# JavaScript equivalent to jQuery basics
 
-##Intro
+## Intro
 jQuery is a great cross-platform JavaScript library for DOM selection, manipulation and other cool things, but usually you load 84kb and use less than 3%. So maybe you want try another cool alternative, use native JavaScript with their methods... Also you can load jQuery using CDN... But again, maybe you want to try native JavaScript...
 
-##Index
+## Index
 * [Selectors](#selectors)
 * [Attributes](#attributes)
 * [Styles](#styles)
@@ -11,20 +11,20 @@ jQuery is a great cross-platform JavaScript library for DOM selection, manipulat
 * [Events](#events)
 * [Others](#others)
 
-##Selectors
+## Selectors
 
-###$() 
+### $() 
 (IE 8+)
 ```javascript
 var $ = function(el) {
     return document.querySelectorAll(el);
 };
 ```
-###$('#foo')
+### $('#foo')
 ```javascript
 document.getElementById('foo')
 ```
-###$('.foo')
+### $('.foo')
 IE 8+
 ```javascript
 document.querySelectorAll('.foo')
@@ -33,55 +33,55 @@ IE 9+
 ```javascript
 document.getElementsByClassName('foo')
 ```
-###$('span')
+### $('span')
 ```javascript
 document.getElementsByTagName('span')
 ```
-###$('#foo span')
+### $('#foo span')
 ```javascript
 document.getElementById('foo').getElementsByTagName('span')
 ```
-###$('html')
+### $('html')
 ```javascript
 document.documentElement
 ```
-###$('head')
+### $('head')
 ```javascript
 document.head
 ```
-###$('body')
+### $('body')
 ```javascript
 document.body
 ```
-###$('#foo').parent()
+### $('#foo').parent()
 ```javascript
 document.getElementById('foo').parentNode
 ```
-###$('#foo).children()
+### $('#foo).children()
 ```javascript
 document.getElementById('foo').children
 ```
-###$('#foo').next()
+### $('#foo').next()
 IE 9+
 ```javascript
 document.getElementById('foo').nextElementSibling
 ```
 
-##Attributes
+## Attributes
 
-###$('#foo').html()
+### $('#foo').html()
 ```javascript
 document.getElementById('foo').innerHTML
 ```
-###$('#foo').html('Hello world!')
+### $('#foo').html('Hello world!')
 ```javascript
 document.getElementById('foo').innerHTML = 'Hello world!'
 ```
-###$('#foo').val()
+### $('#foo').val()
 ```javascript
 document.getElementById('foo').value
 ```
-###$('#foo').addClass('bar')
+### $('#foo').addClass('bar')
 ```javascript
 document.getElementById('foo').className += ' bar'
 ```
@@ -89,7 +89,7 @@ IE 10+
 ```javascript
 document.getElementById('foo').classList.add('bar')
 ```
-###$('#foo').removeClass('bar')
+### $('#foo').removeClass('bar')
 IE 10+
 ```javascript
 document.getElementById('foo').classList.remove('bar')
@@ -109,7 +109,7 @@ function removeClass(elem, className) {
 removeClass(document.getElementById('foo'), 'bar')
 ```
 
-###$('#foo').hasClass('bar')
+### $('#foo').hasClass('bar')
 IE 10+
 ```javascript
 document.getElementById('foo').classList.contains('bar')
@@ -123,7 +123,7 @@ function hasClass(elem, className) {
 hasClass(document.getElementById('foo'), 'bar')
 ```
 
-###$('#foo').toggleClass('bar')
+### $('#foo').toggleClass('bar')
 IE 10 +
 ```javascript
 document.getElementById('foo').classList.toggle('bar')
@@ -145,22 +145,22 @@ function toggleClass(elem, className) {
 toggleClass(document.getElementById('foo'), 'bar')
 ```
 
-##Styles
+## Styles
 
-###$('#foo').hide()
+### $('#foo').hide()
 ```javascript
 document.getElementById('foo').style.display = 'none'
 ```
-###$('#foo').css('background-color', red')
+### $('#foo').css('background-color', red')
 ```javascript
 document.getElementById('foo').style['background-color'] = 'red'
     
 document.getElementById('foo').style.backgroundColor = 'red'
 ```
 
-##Effects
+## Effects
 
-###$('#foo').fadeOut(750)
+### $('#foo').fadeOut(750)
 ```javascript
 function fadeOut(ms, el) {
     var opacity = 1,
@@ -184,7 +184,7 @@ function fadeOut(ms, el) {
 fadeOut(750, document.getElementById('foo'))
 ```
 
-###$('#foo').fadeIn(750)
+### $('#foo').fadeIn(750)
 ```javascript
 function fadeIn(ms, el) {
     var opacity = 0,
@@ -208,14 +208,14 @@ function fadeIn(ms, el) {
 fadeIn(750, document.getElementById('foo'))
 ```
 
-##Events
+## Events
 
-###$(document).ready
+### $(document).ready
 IE 9+
 ```javascript
 document.addEventListener('DOMContentLoaded', function() { ... })
 ```
-###$('#foo').on('click', function() { ... })
+### $('#foo').on('click', function() { ... })
 ```javascript
 document.getElementById('foo').onclick = function() { ... }
 ```
@@ -224,32 +224,32 @@ IE 9 +
 document.getElementById('foo').addEventListener('click', function() { ... })
 ```
 
-##Others
+## Others
 
-###$('#foo').after('&lt;div id="a"&gt;b&lt;/div&gt;')
+### $('#foo').after('&lt;div id="a"&gt;b&lt;/div&gt;')
 ```javascript
 document.getElementById('foo').insertAdjacentHTML('beforeend', '<div id="a">b</div>')
     
 document.getElementById('foo').innerHTML += '<div id="a">b</div>'
 ```
-###$('#foo').prepend('&lt;div id="a"&gt;b&lt;/div&gt;')
+### $('#foo').prepend('&lt;div id="a"&gt;b&lt;/div&gt;')
 ```javascript
 document.getElementById('foo').insertAdjacentHTML('afterbegin', '<div id="a">b</div>')
 ```
-###$('#foo').before('&lt;div id="a"&gt;b&lt;/div&gt;')
+### $('#foo').before('&lt;div id="a"&gt;b&lt;/div&gt;')
 ```javascript
 document.getElementById('foo').insertAdjacentHTML('beforebegin', '<div id="a">b</div>')
 ```
-###$('#foo').after('&lt;div id="a"&gt;b&lt;/div&gt;')
+### $('#foo').after('&lt;div id="a"&gt;b&lt;/div&gt;')
 ```javascript
 document.getElementById('foo').insertAdjacentHTML('afterend', '<div id="a">b</div>')
 ```
-###$('#foo').remove()
+### $('#foo').remove()
 ```javascript
 document.getElementById('foo').parentNode.removeChild(document.getElementById('foo'))
 ```
 
-##Authors
+## Authors
 Taking from:
 - [JavaScript equivalent to jQuery basics](http://codepen.io/danielcure/full/omDwv/)
 
