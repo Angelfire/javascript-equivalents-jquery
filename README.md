@@ -256,3 +256,6 @@ Taking from:
 Inspired by:
 - [Doing without jQuery](http://evanhahn.com/doing-without-jquery/)
 - [From jQuery to JavaScript: A Reference](http://code.tutsplus.com/tutorials/from-jquery-to-javascript-a-reference--net-23703)
+
+## More resources
+A great article was published here: [Cheat sheet for moving from jQuery to vanilla JavaScript](https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/)
